@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[eclipse中启动项目报内存溢出问题通过修改配置解决]]></title>
+    <url>%2Fblog%2F2017%2F11%2F13%2FeclipseMemory%2F</url>
+    <content type="text"><![CDATA[先停止运行，双击图片中的指定位置，显示具体配置页面。 点击图片中链接 在&ldquo;arguments&rdquo;标签卡中对&ldquo;VM arguments&rdquo;进行配置，在第一行添加-Xms256M -Xmx1024M -XX:PermSize=64M -XX:MaxPermSize=128M 点击&ldquo;apply&rdquo;按钮。Tomcat停止运行才可以修改。]]></content>
+      <categories>
+        <category>技术</category>
+        <category>语言</category>
+        <category>java</category>
+        <category>eclipse</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>语言</tag>
+        <tag>java</tag>
+        <tag>eclipse</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git提交项目到github]]></title>
     <url>%2Fblog%2F2017%2F11%2F13%2FgitToGitHub%2F</url>
     <content type="text"><![CDATA[首先你需要一个github账号，所有还没有的话先去注册吧！ https://github.com/ 我们使用git需要先安装git工具，这里给出下载地址，下载后一路直接安装即可： https://git-for-windows.github.io/1.进入Github首页，点击New repository新建一个项目 &nbsp;2.填写相应信息后点击create即可 Repository name: 仓库名称 Description(可选): 仓库描述介绍 Public,&nbsp;Private&nbsp;: 仓库权限（公开共享，私有或指定合作者） Initialize this repository with a README: 添加一个README.md gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore license: 证书类型，对应生成文件LICENSE 4.点击Clone or dowload会出现一个地址，copy这个地址备用。 5.接下来就到本地操作了，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为Git Gui Here,Git Bash Here,这里我们选择Git Bash Here，进入如下界面，Test_Bluetooth即为我的项目名。 6.接下来输入如下代码（关键步骤），把github上面的仓库克隆到本地 git clone 你之前复制的地址 如下: &nbsp;7.这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如图我多出了个Test文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下， 8.接着继续输入命令 cd Test，进入Test文件夹 9.接下来依次输入以下代码即可完成其他剩余操作： git add . （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来） git commit &nbsp;-m &nbsp;”提交信息” （注：&ldquo;提交信息&rdquo;里面换成你需要，如&ldquo;first commit&rdquo;） git push -u origin master &nbsp; （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码） 本文由 cqzx 创作 本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名]]></content>
