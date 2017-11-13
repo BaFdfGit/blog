@@ -4,8 +4,40 @@
 
     
   <url>
+    <loc>http://yoursite.com/blog/2017/11/13/owbBlog/</loc>
+    <lastmod>2017-11-13T08:44:27.918Z</lastmod>
+    <data>
+        <display>
+        <title>个人博客搭建(GitHub+Hexo)</title>
+        <pubTime>2017-11-13T07:49:44.000Z</pubTime>
+        
+        <tag>技术</tag>
+         
+        <tag>git</tag>
+         
+        <tag>github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="git" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/git/"/>
+          
+             
+              <breadCrumb title="github&amp;hexo" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/git/github-hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/blog/2017/06/01/internetBooster/</loc>
-    <lastmod>2017-11-13T07:32:43.665Z</lastmod>
+    <lastmod>2017-11-13T07:33:23.681Z</lastmod>
     <data>
         <display>
         <title>配置科学上网加速器</title>
