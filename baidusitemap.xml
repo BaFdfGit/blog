@@ -4,8 +4,28 @@
 
     
   <url>
-    <loc>http://yoursite.com/blog/2017/11/09/firstPage/</loc>
-    <lastmod>2017-11-13T05:39:55.809Z</lastmod>
+    <loc>http://yoursite.com/blog/2017/06/01/internetBooster/</loc>
+    <lastmod>2017-11-13T05:59:06.062Z</lastmod>
+    <data>
+        <display>
+        <title>配置科学上网加速器</title>
+        <pubTime>2017-06-01T15:47:44.000Z</pubTime>
+        
+        <tag>vpn</tag>
+         
+         
+           
+             
+              <breadCrumb title="vpn" url="http://yoursite.com/blog/categories/vpn/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/blog/2017/11/09/proxyServer/</loc>
+    <lastmod>2017-11-13T05:53:40.823Z</lastmod>
     <data>
         <display>
         <title>搭建属于自己的科学代理服务器</title>
@@ -19,26 +39,6 @@
 
     
     
-    
-  <url>
-    <loc>http://yoursite.com/blog/2017/06/01/test/</loc>
-    <lastmod>2017-11-10T02:54:21.007Z</lastmod>
-    <data>
-        <display>
-        <title>测试文章</title>
-        <pubTime>2017-06-01T15:47:44.000Z</pubTime>
-        
-        <tag>测试标签</tag>
-         
-         
-           
-             
-              <breadCrumb title="分类测试" url="http://yoursite.com/blog/categories/%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
 </urlset>
