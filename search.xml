@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[搭建属于自己的科学代理服务器]]></title>
+    <url>%2Fblog%2F2017%2F11%2F09%2FproxyServer%2F</url>
+    <content type="text"><![CDATA[本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器 前提搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，点击链接地址，使用此链接地址，首次充值新用户可以得到额外10美元奖励，够你玩几个月。好了，闲话少说进入正题： 第一步：安装GCC 及pip依次执行以下命令： 123apt-get update apt-get install build-essentialapt-get install python-pip 为了在安装代理的时候出现版本问题错误，执行完以上命令，再执行： 1pip install --upgrade setuptools 第二步：安装Python首先得保证你的服务器上有Python，且Python版本为2.6或者2.7，如果你服务器已经安装有Python，可使用命令：python –version 查看Python版本 如下图： 本人使用的是Python2.7.11，如果符合条件，可略过以下安装步骤： （1）、下载Python安装包在python 官网上下载2.7 版本的source code 。传送门 下载完成后，是一个Python-2.7.11.tar.xz； （2）、上传Python-2.7.11.tgz将Python-2.7.11.tar.xz 上传到你服务器某一目录如：/usr/local/shadowsocket/，当然在终端用wget下载，可省略此步骤； （3）、解压Python-2.7.11.tgz执行以下命令： 1tar -xvf Python-2.7.11.tar.xz （4）、进入解压目录，依次执行以下命令：123./configuremake make install （5）、以上步骤执行完，验证是否安装成功：执行： 1python –version 得到Python的版本号则为成功,完成第二步; 第三步：安装shadowsocks代理（1）、安装shadowsocks执行以下命令： 1pip install shadowsocks 配置单用户或者多用户，编写json文件执行以下命令： 1vim /etc/shadowsocks.json 单用户配置： 12345678910&#123; &quot;server&quot;:&quot;你的服务器IP&quot;, &quot;server_port&quot;:8388, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;password&quot;:&quot;设置密码&quot;, &quot;timeout&quot;:300, &quot;method&quot;:&quot;aes-256-cfb&quot;, &quot;fast_open&quot;: false&#125; 本文不做多用户配置说明，有兴趣的可以自行google。 （3）、安装m2crypto安装m2crypto可以加快一点加密速度，执行： 1apt-get install python-m2crypto （4）、启动服务前台执行命令： 1ssserver -c /etc/shadowsocks.json 后台启动/停止命令： 12ssserver -c /etc/shadowsocks.json -d startssserver -c /etc/shadowsocks.json -d stop 启动后，你就可以科学上网了。 第四步：配置加速器将在之后博文中说明。 由于工作需要，爬墙是必须的，但请勿作他用，不参与黄赌毒，不发表不正当言论，请自重！ 本文由 tfss创作本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名]]></content>
+      <categories>
+        <category>vpn</category>
+        <category>翻墙</category>
+        <category>科学上网</category>
+      </categories>
+      <tags>
+        <tag>vpn</tag>
+        <tag>翻墙</tag>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[配置科学上网加速器]]></title>
+    <url>%2Fblog%2F2017%2F06%2F01%2FinternetBooster%2F</url>
+    <content type="text"><![CDATA[##配置科学上网加速器 本文默认配置在了/root/kcptun/目录，所以下载的传送门kcptun-linux-amd64-20160922.tar.gz（可以用别的版本）也放到了这个目录，可自行更改。 首先创建启动脚本 start.sh： 1234#!/bin/bashcd /root/kcptun/./server_linux_amd64 -c /root/kcptun/server-config.json &gt; kcptun.log 2&gt;&amp;1 &amp;echo &quot;Kcptun started.&quot; 创建停止脚本：stop.sh: 12345678#!/bin/bashecho &quot;Stopping Kcptun...&quot;PID=`ps -ef | grep server_linux_amd64 | grep -v grep | awk &apos;&#123;print $2&#125;&apos;`if [ &quot;&quot; != &quot;$PID&quot; ]; then echo &quot;killing $PID&quot; kill -9 $PID fi echo &quot;Kcptun stoped.&quot; 创建重启脚本restart.sh: 12345#!/bin/bashcd /root/kcptun/sh stop.shecho &quot;Restarting Kcptun...&quot;sh start.sh 创建号以上三个脚本后，就可以创建配置文件server-config.json了： 123456789101112131415161718192021&#123; &quot;listen&quot;: &quot;:29900&quot;, &quot;target&quot;: &quot;127.0.0.1:8380&quot;, &quot;key&quot;: &quot;test&quot;, &quot;crypt&quot;: &quot;salsa20&quot;, &quot;mode&quot;: &quot;fast2&quot;, &quot;mtu&quot;: 1350, &quot;sndwnd&quot;: 1024, &quot;rcvwnd&quot;: 1024, &quot;datashard&quot;: 70, &quot;parityshard&quot;: 30, &quot;dscp&quot;: 46, &quot;nocomp&quot;: false, &quot;acknodelay&quot;: false, &quot;nodelay&quot;: 0, &quot;interval&quot;: 40, &quot;resend&quot;: 0, &quot;nc&quot;: 0, &quot;sockbuf&quot;: 4194304, &quot;keepalive&quot;: 10&#125; 以上就是配置科学上网加速器的全过程，相当简单。不清楚的地方，可以在博文下面留言。 本文由 tfss 创作 本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名]]></content>
+      <categories>
+        <category>vpn</category>
+        <category>翻墙</category>
+        <category>科学上网</category>
+        <category>加速器</category>
+      </categories>
+      <tags>
+        <tag>vpn</tag>
+        <tag>翻墙</tag>
+        <tag>科学上网</tag>
+        <tag>加速器</tag>
+      </tags>
+  </entry>
+</search>
