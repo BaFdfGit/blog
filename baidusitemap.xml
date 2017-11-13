@@ -3,11 +3,9 @@
 
 
     
-    
-    
   <url>
     <loc>http://yoursite.com/blog/2017/06/01/internetBooster/</loc>
-    <lastmod>2017-11-13T05:59:06.062Z</lastmod>
+    <lastmod>2017-11-13T06:16:21.075Z</lastmod>
     <data>
         <display>
         <title>配置科学上网加速器</title>
@@ -15,11 +13,24 @@
         
         <tag>vpn</tag>
          
+        <tag>翻墙</tag>
+         
+        <tag>科学上网</tag>
+         
+        <tag>加速器</tag>
+         
          
            
              
               <breadCrumb title="vpn" url="http://yoursite.com/blog/categories/vpn/"/>
           
+             
+              <breadCrumb title="翻墙" url="http://yoursite.com/blog/categories/vpn/%E7%BF%BB%E5%A2%99/"/>
+          
+             
+              <breadCrumb title="科学上网" url="http://yoursite.com/blog/categories/vpn/%E7%BF%BB%E5%A2%99/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+          
+             
         </display>
     </data>
     </url>
@@ -27,18 +38,35 @@
     
   <url>
     <loc>http://yoursite.com/blog/2017/11/09/proxyServer/</loc>
-    <lastmod>2017-11-13T05:53:40.823Z</lastmod>
+    <lastmod>2017-11-13T06:15:58.752Z</lastmod>
     <data>
         <display>
         <title>搭建属于自己的科学代理服务器</title>
         <pubTime>2017-11-09T07:09:14.126Z</pubTime>
         
+        <tag>vpn</tag>
+         
+        <tag>翻墙</tag>
+         
+        <tag>科学上网</tag>
+         
          
            
+             
+              <breadCrumb title="vpn" url="http://yoursite.com/blog/categories/vpn/"/>
+          
+             
+              <breadCrumb title="翻墙" url="http://yoursite.com/blog/categories/vpn/%E7%BF%BB%E5%A2%99/"/>
+          
+             
+              <breadCrumb title="科学上网" url="http://yoursite.com/blog/categories/vpn/%E7%BF%BB%E5%A2%99/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+          
         </display>
     </data>
     </url>
 
+    
+    
     
     
 </urlset>

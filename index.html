@@ -319,6 +319,50 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/" itemprop="url" rel="index">
+                    <span itemprop="name">vpn</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/翻墙/" itemprop="url" rel="index">
+                    <span itemprop="name">翻墙</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/翻墙/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -358,45 +402,14 @@
 
       
         
-          
-            <p>本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器</p>
-<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，<a href="https://www.vultr.com/" target="_blank" rel="external">点击链接地址</a>，使用此链接地址，<strong>首次充值新用户可以得到额外10美元奖励，够你玩几个月</strong>。好了，闲话少说进入正题：</p>
-<h2 id="第一步：安装GCC-及pip"><a href="#第一步：安装GCC-及pip" class="headerlink" title="第一步：安装GCC 及pip"></a>第一步：安装GCC 及pip</h2><p>依次执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update </span><br><span class="line">apt-get install build-essential</span><br><span class="line">apt-get install python-pip</span><br></pre></td></tr></table></figure>
-<p>为了在安装代理的时候出现版本问题错误，执行完以上命令，再执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade setuptools</span><br></pre></td></tr></table></figure>
-<h2 id="第二步：安装Python"><a href="#第二步：安装Python" class="headerlink" title="第二步：安装Python"></a>第二步：安装Python</h2><p>首先得保证你的服务器上有Python，且Python版本为2.6或者2.7，如果你服务器已经安装有Python，可使用命令：python –version 查看Python版本 如下图：</p>
-<p><img src="http://img1.imgtn.bdimg.com/it/u=3051792487,3706952710&amp;fm=27&amp;gp=0.jpg" alt=""></p>
-<p>本人使用的是Python2.7.11，如果符合条件，可略过以下安装步骤：</p>
-<h3 id="（1）、下载Python安装包"><a href="#（1）、下载Python安装包" class="headerlink" title="（1）、下载Python安装包"></a>（1）、下载Python安装包</h3><p>在python 官网上下载2.7 版本的source code 。<a href="https://www.python.org/downloads/release/python-2711/" target="_blank" rel="external">传送门</a></p>
-<p>下载完成后，是一个Python-2.7.11.tar.xz；</p>
-<h3 id="（2）、上传Python-2-7-11-tgz"><a href="#（2）、上传Python-2-7-11-tgz" class="headerlink" title="（2）、上传Python-2.7.11.tgz"></a>（2）、上传Python-2.7.11.tgz</h3><p>将Python-2.7.11.tar.xz 上传到你服务器某一目录如：/usr/local/shadowsocket/，当然在终端用wget下载，可省略此步骤；</p>
-<h3 id="（3）、解压Python-2-7-11-tgz"><a href="#（3）、解压Python-2-7-11-tgz" class="headerlink" title="（3）、解压Python-2.7.11.tgz"></a>（3）、解压Python-2.7.11.tgz</h3><p>执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf Python-2.7.11.tar.xz</span><br></pre></td></tr></table></figure>
-<h3 id="（4）、进入解压目录，依次执行以下命令："><a href="#（4）、进入解压目录，依次执行以下命令：" class="headerlink" title="（4）、进入解压目录，依次执行以下命令："></a>（4）、进入解压目录，依次执行以下命令：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make </span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h3 id="（5）、以上步骤执行完，验证是否安装成功："><a href="#（5）、以上步骤执行完，验证是否安装成功：" class="headerlink" title="（5）、以上步骤执行完，验证是否安装成功："></a>（5）、以上步骤执行完，验证是否安装成功：</h3><p>执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python –version</span><br></pre></td></tr></table></figure>
-<p>得到Python的版本号则为成功,完成第二步;</p>
-<h2 id="第三步：安装shadowsocks代理"><a href="#第三步：安装shadowsocks代理" class="headerlink" title="第三步：安装shadowsocks代理"></a>第三步：安装shadowsocks代理</h2><h3 id="（1）、安装shadowsocks"><a href="#（1）、安装shadowsocks" class="headerlink" title="（1）、安装shadowsocks"></a>（1）、安装shadowsocks</h3><p>执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
-<h3 id="配置单用户或者多用户，编写json文件"><a href="#配置单用户或者多用户，编写json文件" class="headerlink" title="配置单用户或者多用户，编写json文件"></a>配置单用户或者多用户，编写json文件</h3><p>执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-<p>单用户配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;你的服务器IP&quot;,</span><br><span class="line">    &quot;server_port&quot;:8388,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;设置密码&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>本文不做多用户配置说明，有兴趣的可以自行google。</p>
-<h3 id="（3）、安装m2crypto"><a href="#（3）、安装m2crypto" class="headerlink" title="（3）、安装m2crypto"></a>（3）、安装m2crypto</h3><p>安装m2crypto可以加快一点加密速度，执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python-m2crypto</span><br></pre></td></tr></table></figure>
-<h3 id="（4）、启动服务"><a href="#（4）、启动服务" class="headerlink" title="（4）、启动服务"></a>（4）、启动服务</h3><p>前台执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-<p>后台启动/停止命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks.json -d start</span><br><span class="line">ssserver -c /etc/shadowsocks.json -d stop</span><br></pre></td></tr></table></figure>
-<p>启动后，你就可以科学上网了。 </p>
-<h2 id="第四步：配置加速器"><a href="#第四步：配置加速器" class="headerlink" title="第四步：配置加速器"></a>第四步：配置加速器</h2><p>将在之后博文中说明。</p>
-<p>由于工作需要，爬墙是必须的，但请勿作他用，不参与黄赌毒，不发表不正当言论，请自重！</p>
-<hr>
-<p>本文由<a href="https://tfssweb.github.io/" target="_blank" rel="external">tfss</a>创作<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名</p>
-
-          
+          搭建属于自己的科学代理服务器
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/blog/2017/11/09/proxyServer/">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -499,6 +512,39 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/blog/categories/vpn/" itemprop="url" rel="index">
                     <span itemprop="name">vpn</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/翻墙/" itemprop="url" rel="index">
+                    <span itemprop="name">翻墙</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/翻墙/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/vpn/翻墙/科学上网/加速器/" itemprop="url" rel="index">
+                    <span itemprop="name">加速器</span>
                   </a>
                 </span>
 
@@ -648,7 +694,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -659,7 +705,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -809,8 +855,6 @@
   
 
 
-  
-
 
 
 
@@ -849,11 +893,6 @@
   
   
     <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
