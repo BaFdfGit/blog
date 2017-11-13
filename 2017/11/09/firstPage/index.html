@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="欢迎来到我的第一篇文章, ##标题一 ###测试标题第一次写点东西不知道写点什么，随便写吧~~~ ##标题二 ###测试标题二这个标题也没有什么内容，因为这是用来测试用的">
+<meta name="description" content="本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器 ##前提 搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，点击链接地址，，使用此链接地址，首次充值新用户可以得到额外10美元奖励，够你玩几个月。好了，闲话少说进入正题： ##第一步：安装GCC 及pip 依次执行以下命令： ‘’’ap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇文章">
+<meta property="og:title" content="搭建属于自己的科学代理服务器">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/firstPage/index.html">
 <meta property="og:site_name" content="苍穹之下">
-<meta property="og:description" content="欢迎来到我的第一篇文章, ##标题一 ###测试标题第一次写点东西不知道写点什么，随便写吧~~~ ##标题二 ###测试标题二这个标题也没有什么内容，因为这是用来测试用的">
+<meta property="og:description" content="本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器 ##前提 搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，点击链接地址，，使用此链接地址，首次充值新用户可以得到额外10美元奖励，够你玩几个月。好了，闲话少说进入正题： ##第一步：安装GCC 及pip 依次执行以下命令： ‘’’ap">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-10T07:58:43.032Z">
+<meta property="og:updated_time" content="2017-11-13T05:39:55.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇文章">
-<meta name="twitter:description" content="欢迎来到我的第一篇文章, ##标题一 ###测试标题第一次写点东西不知道写点什么，随便写吧~~~ ##标题二 ###测试标题二这个标题也没有什么内容，因为这是用来测试用的">
+<meta name="twitter:title" content="搭建属于自己的科学代理服务器">
+<meta name="twitter:description" content="本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器 ##前提 搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，点击链接地址，，使用此链接地址，首次充值新用户可以得到额外10美元奖励，够你玩几个月。好了，闲话少说进入正题： ##第一步：安装GCC 及pip 依次执行以下命令： ‘’’ap">
 
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>第一篇文章 | 苍穹之下</title>
+  <title>搭建属于自己的科学代理服务器 | 苍穹之下</title>
   
 
 
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一篇文章</h1>
+          <h1 class="post-title" itemprop="name headline">搭建属于自己的科学代理服务器</h1>
         
 
         <div class="post-meta">
@@ -360,11 +360,55 @@
       
 
       
-        <p>欢迎来到我的第一篇文章,</p>
-<p>##标题一</p>
-<p>###测试标题<br>第一次写点东西不知道写点什么，随便写吧~~~</p>
-<p>##标题二</p>
-<p>###测试标题二<br>这个标题也没有什么内容，因为这是用来测试用的</p>
+        <p>本文采用Ubuntu17.04 64位操作系统搭建科学上网服务器</p>
+<p>##前提</p>
+<p>搭建自己的翻墙代理首先得需要有自己的服务器，既然翻墙所以服务器尽量选择国外的，本人使用的是Vultr服务器，好处是一旦被封了，可以销毁服务重新创建，点击链接地址，，使用此链接地址，首次充值新用户可以得到额外10美元奖励，够你玩几个月。好了，闲话少说进入正题：</p>
+<p>##第一步：安装GCC 及pip</p>
+<p>依次执行以下命令：</p>
+<p>‘’’<br>apt-get update<br>apt-get install build-essential<br>apt-get install python-pip<br>‘’’</p>
+<p>为了在安装代理的时候出现版本问题错误，执行完以上命令，再执行：</p>
+<p>‘pip install –upgrade setuptools’</p>
+<p>##第二步：安装Python</p>
+<p>首先得保证你的服务器上有Python，且Python版本为2.6或者2.7，如果你服务器已经安装有Python，可使用命令：python –version 查看Python版本 如下图：</p>
+<p>(<a href="http://img1.imgtn.bdimg.com/it/u=3051792487,3706952710&amp;fm=27&amp;gp=0.jpg" target="_blank" rel="external">http://img1.imgtn.bdimg.com/it/u=3051792487,3706952710&amp;fm=27&amp;gp=0.jpg</a>)</p>
+<p>本人使用的是Python2.7.11，如果符合条件，可略过以下安装步骤：</p>
+<p>###（1）、下载Python安装包</p>
+<p>在python 官网上下载2.7 版本的source code 。<a href="https://www.python.org/downloads/release/python-2711/" target="_blank" rel="external">传送门</a></p>
+<p>下载完成后，是一个Python-2.7.11.tar.xz；</p>
+<p>###（2）、上传Python-2.7.11.tgz</p>
+<p>将Python-2.7.11.tar.xz 上传到你服务器某一目录如：/usr/local/shadowsocket/，当然在终端用wget下载，可省略此步骤；</p>
+<p>###（3）、解压Python-2.7.11.tgz</p>
+<p>执行以下命令：</p>
+<p>‘tar -xvf Python-2.7.11.tar.xz’</p>
+<p>###（4）、进入解压目录，依次执行以下命令：</p>
+<p>‘’’<br>./configure<br>make<br>make install<br>‘’’</p>
+<p>###（5）、以上步骤执行完，验证是否安装成功：</p>
+<p>执行：</p>
+<p>‘<br>python –version<br>‘</p>
+<p>得到Python的版本号则为成功,完成第二步;</p>
+<p>##第三步：安装shadowsocks代理</p>
+<p>###（1）、安装shadowsocks</p>
+<p>执行以下命令：</p>
+<p>‘<br>pip install shadowsocks<br>‘</p>
+<p>###配置单用户或者多用户，编写json文件</p>
+<p>执行以下命令：</p>
+<p>‘<br>vim /etc/shadowsocks.json<br>‘</p>
+<p>单用户配置：</p>
+<p>‘’’<br>{<br>    “server”:”你的服务器IP”,<br>    “server_port”:8388,<br>    “local_address”: “127.0.0.1”,<br>    “local_port”:1080,<br>    “password”:”设置密码”,<br>    “timeout”:300,<br>    “method”:”aes-256-cfb”,<br>    “fast_open”: false<br>}<br>‘’’</p>
+<p>本文不做多用户配置说明，有兴趣的可以自行google。</p>
+<p>###（3）、安装m2crypto</p>
+<p>安装m2crypto可以加快一点加密速度，执行：</p>
+<p>‘<br>apt-get install python-m2crypto<br>‘</p>
+<p>###（4）、启动服务</p>
+<p>前台执行命令：</p>
+<p>‘<br>ssserver -c /etc/shadowsocks.json<br>‘</p>
+<p>后台启动/停止命令：</p>
+<p>‘’’<br>ssserver -c /etc/shadowsocks.json -d start<br>ssserver -c /etc/shadowsocks.json -d stop<br>‘’’</p>
+<p>启动后，你就可以科学上网了。 </p>
+<p>##第四步：配置加速器</p>
+<p>将在之后博文中说明。</p>
+<hr>
+<p>本文由<a href="https://tfssweb.github.io/" target="_blank" rel="external">tfss</a>创作<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名</p>
 
       
     </div>
@@ -793,7 +837,7 @@ var jiathis_config={
         var disqus_config = function () {
           this.page.url = 'http://yoursite.com/2017/11/09/firstPage/';
           this.page.identifier = '2017/11/09/firstPage/';
-          this.page.title = '第一篇文章';
+          this.page.title = '搭建属于自己的科学代理服务器';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Chen.disqus.com/embed.js';
