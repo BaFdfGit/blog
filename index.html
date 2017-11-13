@@ -311,6 +311,172 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2017/11/13/gitToGitHub/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="中林">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苍穹之下">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2017/11/13/gitToGitHub/" itemprop="url">git提交项目到github</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-13T16:52:14+08:00">
+                2017-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog/2017/11/13/gitToGitHub/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/13/gitToGitHub/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>首先你需要一个github账号，所有还没有的话先去注册吧！</strong></p>
+<p><strong><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></strong></p>
+<p><strong>我们使用git需要先安装git工具，这里给出下载地址，下载后一路直接安装即可：</strong></p>
+<p><strong><a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a></strong><br><strong><span style="font-family: 'Microsoft YaHei'; font-size: 16px; color: #ff0000;">1.进入Github首页，点击New repository新建一个项目</span>
+</strong></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823164154526-418441991.png" alt=""></p>
+<p><strong><span style="color: #ff0000;">&nbsp;2.填写相应信息后点击create即可</span></strong></p>
+<p><strong>Repository name: 仓库名称</strong></p>
+<p><strong>Description(可选): 仓库描述介绍</strong></p>
+<p><strong>Public,&nbsp;Private&nbsp;: 仓库权限（公开共享，私有或指定合作者）</strong></p>
+<p><strong>Initialize this repository with a README: 添加一个README.md</strong></p>
+<p><strong>gitignore: 不需要进行版本管理的仓库类型，对应生成文件.gitignore</strong></p>
+<p><strong>license: 证书类型，对应生成文件LICENSE</strong></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823165025370-49444506.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823165107308-439926006.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">4.点击Clone or dowload会出现一个地址，copy这个地址备用。</span></strong></span></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823165450636-1167722003.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">5.接下来就到本地操作了，首先右键你的项目，如果你之前安装git成功的话，右键会出现两个新选项，分别为Git Gui Here,Git Bash Here,这里我们选择Git Bash Here，进入如下界面，Test_Bluetooth即为我的项目名。</span></strong></span></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171048308-194895299.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">6.接下来输入如下代码（关键步骤），把github上面的仓库克隆到本地</span></strong></span></p>
+<p><strong>git clone 你之前复制的地址 如下:</strong></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171143980-741152042.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">&nbsp;7.这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如图我多出了个Test文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下，</span></strong></span></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171209730-2089496483.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">8.接着继续输入命令 cd Test，进入Test文件夹</span></strong></span></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171454261-10363777.png" alt=""></p>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;"><strong><span style="color: #ff0000;">9.接下来依次输入以下代码即可完成其他剩余操作：</span></strong></span></p>
+<p><strong>git add . （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）</strong></p>
+<p><strong>git commit &nbsp;-m &nbsp;”提交信息” （注：&ldquo;提交信息&rdquo;里面换成你需要，如&ldquo;first commit&rdquo;）</strong></p>
+<p><strong>git push -u origin master &nbsp; （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）</strong></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171557823-3863512.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171651808-1225335136.png" alt=""></p>
+<p><img src="http://images2015.cnblogs.com/blog/913913/201608/913913-20160823171818933-1506815566.png" alt=""></p>
+<hr>
+<p>本文由 <a href="https://bafdfgit.github.io/blog/" target="_blank" rel="external"><font color="red">cqzx</font></a> 创作</p>
+<p>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2017/11/13/owbBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -896,7 +1062,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
