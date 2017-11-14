@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://yoursite.com/blog/2017/11/14/CentOs7InstMySql/</loc>
+    <lastmod>2017-11-14T02:38:50.667Z</lastmod>
+    <data>
+        <display>
+        <title>centos7.2yum安装MySQL5.7</title>
+        <pubTime>2017-11-14T01:58:46.919Z</pubTime>
+        
+        <tag>技术</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="linux" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/"/>
+          
+             
+              <breadCrumb title="mysql" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/blog/2017/11/13/eclipseMemory/</loc>
     <lastmod>2017-11-13T09:25:14.362Z</lastmod>
     <data>
