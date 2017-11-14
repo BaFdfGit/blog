@@ -3,6 +3,36 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/blog/2017/11/14/CentOs7InstMySql/</loc>
+    <lastmod>2017-11-14T05:07:47.352Z</lastmod>
+    <data>
+        <display>
+        <title>centos7.2yum安装MySQL5.7</title>
+        <pubTime>2017-11-14T01:58:46.919Z</pubTime>
+        
+        <tag>技术</tag>
+         
+        <tag>linux</tag>
+         
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+             
+              <breadCrumb title="linux" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/"/>
+          
+             
+              <breadCrumb title="mysql" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://yoursite.com/blog/2017/11/13/eclipseMemory/</loc>
@@ -32,36 +62,6 @@
               <breadCrumb title="java" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/%E8%AF%AD%E8%A8%80/java/"/>
           
              
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/blog/2017/11/14/CentOs7InstMySql/</loc>
-    <lastmod>2017-11-14T02:40:49.569Z</lastmod>
-    <data>
-        <display>
-        <title>centos7.2yum安装MySQL5.7</title>
-        <pubTime>2017-11-14T01:58:46.919Z</pubTime>
-        
-        <tag>技术</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-             
-              <breadCrumb title="linux" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/"/>
-          
-             
-              <breadCrumb title="mysql" url="http://yoursite.com/blog/categories/%E6%8A%80%E6%9C%AF/linux/mysql/"/>
-          
         </display>
     </data>
     </url>
